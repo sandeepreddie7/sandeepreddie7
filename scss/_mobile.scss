@@ -1,0 +1,85 @@
+// widescreens
+@include mediaXl {
+
+}
+
+//desktops
+@include mediaLg {
+    
+}
+
+//tablets
+@include mediaMd {
+    h1 {
+        &.lg-heading {
+            font-size: 3.75rem;
+        }
+    }
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav, 
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .menu-nav {
+        height: 70vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 30vh;
+        transform: translate3d(100%, 0, 0);
+        .portrait {
+            background: url('../img/portrait-2.jpeg');
+            background-size: cover;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+
+        grid-template-columns: 1fr;
+    }
+
+    .projects-items {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .boxes {
+        text-align: left;
+        div {
+            font-size: 1rem;
+        }
+    }
+}
+
+//mobiles
+@include mediaSm {
+    main#home h1 {
+        margin-top: 10vh;
+    }
+}
