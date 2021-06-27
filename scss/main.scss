@@ -121,6 +121,10 @@ main {
 
 .boxes {
     margin-top: 1rem;
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
 
     div {
         font-size: 1.25rem;
@@ -136,29 +140,6 @@ main {
             }
         }
     }
-}
-
-//button styles
-.btn {
-    display: block;
-    border: 0;
-    margin-bottom: 3px;
-    &:hover {
-        background: $secondary-color;
-        color: $primary-color-a;
-    }
-}
-
-.btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 0);
-    color: white;
-}
-
-.btn-light {
-    @extend .btn;
-    background: white;
-    color: black;
 }
 
 #main-footer {
