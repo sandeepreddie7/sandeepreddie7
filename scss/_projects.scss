@@ -1,70 +1,85 @@
 // my projects
+/*
+.projects-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'project1 project2 project3'
+    'project4 project5';
+    grid-template-columns: repeat(3, 1fr);
+}
 
-.projects {
-    padding-bottom: 2rem;
-    &-items {
-        width: 60vw;
-        margin: 2rem auto 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2rem;
+.project1 {
+    grid-area: project1;
+    font-size: 1.075rem;
+}
+
+.project2 {
+    grid-area: project2;
+    font-size: 1.075rem;
+}
+
+
+.project3 {
+    grid-area: project3;
+    font-size: 1.075rem;
+}
+
+
+.project4 {
+    grid-area: project4;
+    font-size: 1.075rem;
+}
+
+.project5 {
+    grid-area: project5;
+    font-size: 1.075rem;
+}
+*/
+
+.project {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 3px solid;
+    margin-bottom: 2.5rem;
+
+    h4 {
+        font-weight: 400;
+        font-size: 1.25rem;
     }
+}
 
-    &-item {
-        position: relative;
-        border-bottom: 5px solid $secondary-color;
-        margin-bottom: 1rem;
-        overflow: hidden;
-        cursor: pointer;
-
-        img {
-            width: 100%;
-            height: 35vh;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: $secondary-color;
-            opacity: 0;
-            @include easeOut;
-        }
-
-        &:hover {
-            &::after {
-                top: 0;
-                opacity: 0.9;
-            }
-
-            .projects-btn {
-                opacity: 1;
-            }
-        }
+.mylist {
+    a {
+        padding: 0px;
+        margin: 7.5px;
     }
-    &-btns {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        text-align: center;
-    }
+}
 
-    &-btn {
-        opacity: 0;
-        color: black;
-        @include easeOut;
-        font-size: 1rem;
+//button styles
+.btn {
+    display: block;
+    border: 0;
+    margin-bottom: 1rem;
+    height: 27.50px;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
 
-        &:hover {
-            color: white;
-        }
+    &:hover {
+        background: $secondary-color;
+        color: $primary-color-a;
     }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: $primary-color-a;
+    color: white;
+}
+
+.btn-light {
+    @extend .btn;
+    background: white;
+    color: black;
 }
